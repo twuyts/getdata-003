@@ -5,7 +5,9 @@ This repo contains the solution to the course project, as described below.
 
 To create the tidy data set, change your working directory to the location of this script and execute:
 
-source('run_analysis.R)
+source('run_analysis.R')
+
+The data is loaded into the tidydata variable.
 
 Course Project Description
 ==========================
