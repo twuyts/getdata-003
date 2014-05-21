@@ -1,3 +1,4 @@
+source('getdataset.R');
 data_train<-getdataset("train");
 data_test<-getdataset("test");
 
