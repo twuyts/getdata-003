@@ -1,4 +1,4 @@
-getdataset<-function(set, only_means=FALSE){
+getdataset<-function(set){
     library("sqldf");
     library("plyr");
     # load activity and feature names
@@ -12,15 +12,8 @@ getdataset<-function(set, only_means=FALSE){
     X<-read.table(paste0("UCI HAR Dataset/",set,"/X_",set,".txt"), 
                   header=FALSE, col.names=features[,2], 
                   colClasses=c(rep("numeric",561)));
-    if (only_means)
-    {
-        # take only fields with "mean" or "std" in their names
-        mean_std_X<-X[,which(grepl("mean|std",colnames(X)))];
-        data<-cbind(subjects,y,mean_std_X);
-    }
-    else
-    {
-        data<-cbind(subjects,y,X);
-    }
+    # take only fields with "mean" or "std" in their names
+    mean_std_X<-X[,which(grepl("mean|std",colnames(X)))];
+    data<-cbind(subjects,y,mean_std_X);
     data;            
 }

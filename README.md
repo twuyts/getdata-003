@@ -3,11 +3,16 @@ getdata-003
 
 This repo contains the solution to the course project, as described below.
 
-To create the tidy data set, change your working directory to the location of this script and execute:
+To create both data sets, change your working directory to the location of this script and execute:
 
 source('run_analysis.R')
 
-The data is loaded into the tidydata variable.
+The dataset containing all mean and standard deviations is loaded into the "data" variable.
+The dataset containing the average of each of these variables per subject and activity is loaded into the "tidydata" variable.
+
+For a full explanation of the variables, I refer to the features_info.txt file in the original data, which can be found in the "UCI HAR Dataset" directory.
+
+The dataset columns are named as described in this document, but without the '()', so they would adhere to the R naming convention.
 
 Course Project Description
 ==========================
